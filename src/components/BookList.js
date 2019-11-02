@@ -11,7 +11,17 @@ const BookslIst = ({ books, changeShelf }) => {
 
   return (
     <div className="list-books-content">
-      <BookShelf books={books} changeShelf={changeShelf} />
+      {shelfType.map(shelf => {
+        const shelfBooks = books.filter(book => book.shelf === shelf.type);
+        return (
+          <BookShelf
+            key={shelf.type}
+            shelfTitle={shelf.title}
+            books={shelfBooks}
+            changeShelf={changeShelf}
+          />
+        );
+      })}
     </div>
   );
 };

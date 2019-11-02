@@ -112,10 +112,12 @@ body,
   bottom: 25px;
 }
 
-.open-search button {
-  display: block;
-  width: 150px;
+.open-search-link {
+  text-decoration: none;
+  display: inline-block;
+  width: 160px;
   height: 50px;
+  line-height: 50px;
   border-radius: 10rem;
   background: #1a73e8;
   border: 1px solid #1a73e8;
@@ -123,7 +125,7 @@ body,
   background-repeat: no-repeat;
   background-position: 15% 50%;
   background-size: 28px;
-  padding-left: 30%;
+  padding-left: 55px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   outline: 0;
@@ -131,7 +133,7 @@ body,
   cursor: pointer;
 }
 
-.open-search button:hover {
+.open-search-link:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -270,7 +272,7 @@ button:active {
   height: 20px;
   width: 100px;
   bottom: 2px;
-  right: 25px;
+  right: 20px;
 }
 
 .book-top {
@@ -315,13 +317,6 @@ button:active {
 
 .book-rating {
   margin: 0.35rem 0;
-}
-
-.book-rating .count {
-  font-size: 85%;
-  margin-left: 0.75rem;
-  vertical-align: text-bottom;
-  color: #999;
 }
 
 .stars-container {
