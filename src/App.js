@@ -20,6 +20,7 @@ class BooksApp extends React.Component {
           <div className="search-books">
             <div className="search-books-bar">
               <button
+                title="Back"
                 className="close-search"
                 onClick={() => this.setState({ showSearchPage: false })}
               >
@@ -34,7 +35,7 @@ class BooksApp extends React.Component {
                   However, remember that the BooksAPI.search method DOES search by title or author. So, don't worry if
                   you don't find a specific author or title. Every search is limited by search terms.
                 */}
-                <input type="text" placeholder="Search by title or author" />
+                <input type="text" autoFocus placeholder="Search by title or author" />
               </div>
             </div>
             <div className="search-books-results">
