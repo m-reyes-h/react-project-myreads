@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 import ShelfChanger from "./ShelfChanger";
 import noCover from "../images/no-cover-available.png";
 
-const Book = ({ book, changeShelf }) => {
+const Book = ({ book, books, changeShelf }) => {
   // fix data
   const rating = isNaN(book.averageRating)
     ? "0"
@@ -42,7 +42,7 @@ const Book = ({ book, changeShelf }) => {
             {book.description && book.description.substr(0, 150)}
           </div>
         </div>
-        <ShelfChanger book={book} changeShelf={changeShelf} />
+        <ShelfChanger book={book} books={books} changeShelf={changeShelf} />
       </div>
     </div>
   );
@@ -50,6 +50,7 @@ const Book = ({ book, changeShelf }) => {
 
 Book.propTypes = {
   book: propTypes.object.isRequired,
+  books: propTypes.array.isRequired,
   changeShelf: propTypes.func.isRequired
 };
 
