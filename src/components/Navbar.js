@@ -7,19 +7,6 @@ const Navbar = () => {
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
-        <nav>
-          <ul className="list-books-menu">
-            <li>
-              <a href="#currently">Currently</a>
-            </li>
-            <li>
-              <a href="news.asp">Want</a>
-            </li>
-            <li>
-              <a href="contact.asp">Read</a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
   );

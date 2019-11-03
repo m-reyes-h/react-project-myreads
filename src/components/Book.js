@@ -4,10 +4,10 @@ import ShelfChanger from "./ShelfChanger";
 import noCover from "../images/no-cover-available.png";
 
 const Book = ({ book, changeShelf }) => {
-  const fixStars = rating => {
-    return isNaN(rating) ? "0" : rating.toString().replace(".", "");
-  };
-
+  // fix data
+  const rating = isNaN(book.averageRating)
+    ? "0"
+    : book.averageRating.toString().replace(".", "");
   const coverImage =
     book.imageLinks && book.imageLinks.thumbnail
       ? book.imageLinks.thumbnail
@@ -36,19 +36,13 @@ const Book = ({ book, changeShelf }) => {
               ))}
           </div>
           <div className="book-rating">
-            <span
-              className={`stars-container stars-${fixStars(
-                book.averageRating
-              )}`}
-            >
-              ★★★★★
-            </span>
+            <span className={`stars-container stars-${rating}`}>★★★★★</span>
           </div>
           <div className="book-description">
             {book.description && book.description.substr(0, 150)}
           </div>
         </div>
-        <ShelfChanger />
+        <ShelfChanger book={book} changeShelf={changeShelf} />
       </div>
     </div>
   );

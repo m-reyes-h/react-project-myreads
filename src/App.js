@@ -19,8 +19,14 @@ class BooksApp extends React.Component {
     });
   };
 
-  changeShelf = () => {
-    return true;
+  changeShelf = (book, shelf) => {
+    DB.update(book, shelf).then(res => {
+      // set book new shelf
+      book.shelf = shelf;
+      this.setState(prevState => ({
+        books: prevState.books.filter(b => b.id !== book.id).concat(book)
+      }));
+    });
   };
 
   render() {

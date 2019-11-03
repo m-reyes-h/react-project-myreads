@@ -165,6 +165,15 @@ body,
   align-items: center;
   margin: 0;
   padding: 0;
+  font-weight: 400;
+}
+
+.search-books-info .tag {
+  padding: 0 0.4rem;
+  background-color: #e1e1e1;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
 .search-books-bar input {

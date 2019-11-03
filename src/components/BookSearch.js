@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BookSearchNavbar from "./BookSearchNavbar";
 import * as DB from "../data/BooksAPI";
 import Book from "./Book";
+import propTypes from "prop-types";
 
 class BookSearch extends Component {
   state = {
@@ -56,10 +57,10 @@ class BookSearch extends Component {
                   <p>{books.length} books found</p>
                   <ol className="books-grid">
                     {books.map(book => (
-                      <li>
+                      <li key={book.id}>
                         <Book
                           book={book}
-                          changeShelf={this.props.chnageShelf}
+                          changeShelf={this.props.changeShelf}
                         />
                       </li>
                     ))}
@@ -69,7 +70,8 @@ class BookSearch extends Component {
             )}
             {books.error && searchTerm.trim().length > 0 && (
               <h3 className="search-books-info">
-                Search did not return any books. Please try again!
+                Search <span className="tag">{searchTerm}</span> did not return
+                any books. Please try again!
               </h3>
             )}
           </div>
@@ -77,6 +79,10 @@ class BookSearch extends Component {
       </div>
     );
   }
+
+  static propTypes = {
+    changeShelf: propTypes.func.isRequired
+  };
 }
 
 export default BookSearch;

@@ -7,7 +7,7 @@ const BookShelf = ({ books, changeShelf, shelfTitle }) => {
     <div>
       <div className="bookshelf">
         <div className="container">
-          <h2 className="bookshelf-title" id="currently">
+          <h2 className="bookshelf-title">
             {shelfTitle}
           </h2>
           <div className="bookshelf-books">
