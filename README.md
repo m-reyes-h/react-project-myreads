@@ -5,7 +5,7 @@ This project was built for the UdacityNanodegree Program. The purpose of the pro
 
 ## Loading the App
 
-You can run a hosted version of the app at: (TODO)
+You can run a hosted version of the app at: ![](https://myreads-mrh.herokuapp.com/ "My Reads")
 
 The project uses Node.js and the Create-React-App starter.
 Once Node is installed, navigate to the directory where you want to store the app.
