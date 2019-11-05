@@ -3,7 +3,7 @@ import BookSearchNavbar from "./BookSearchNavbar";
 import * as DB from "../data/BooksAPI";
 import Book from "./Book";
 import propTypes from "prop-types";
-import { throttle, debounce } from "throttle-debounce";
+import { debounce } from "throttle-debounce";
 
 class BookSearch extends Component {
   state = {

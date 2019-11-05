@@ -54,6 +54,7 @@ Android, Art, Artificial Intelligence, Astronomy, Austen, Baseball, Basketball, 
 - [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
 - [React Router Documentation](http://knowbody.github.io/react-router-docs/)
 - [React API](https://facebook.github.io/react/docs/react-api.html)
+- [Debouncing and Throttling Explained](https://css-tricks.com/debouncing-throttling-explained-examples/)
 
 ### Udacity Resources:
 
